@@ -32,9 +32,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print data
-        run: echo "Data- ${{ inputs.data }}"
+        run: echo "Data- ${{ github.event.inputs.c_temp }}"
       - name: Print data2
-        run: echo "Data2- ${{ secrets.GITHUB_TOKEN }}"
+        run: echo "Data2- ${{ inputs.c_temp }}"
         
   modify-file:
     runs-on: ubuntu-latest
@@ -45,7 +45,7 @@ jobs:
 
     - name: Modify .txt file
       run: |
-        echo "${{github.inputs.data}}" >> ./content.txt
+        echo "${{github.event.inputs.now_time}}\n${{github.event.inputs.c_temp}}" >> ./content.txt
 
     - name: Commit changes
       run: |
