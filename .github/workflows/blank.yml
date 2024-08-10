@@ -17,7 +17,7 @@ on:
     inputs:
       data:
         required: true
-        type: string
+        type: number
       data2:
         required: false
         type: string
