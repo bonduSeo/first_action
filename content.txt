@@ -1,3 +1,4 @@
 line1
 Appending new line to the file
 
+현재시간2024. 8. 8. 오전 8:56\n31.5°C
