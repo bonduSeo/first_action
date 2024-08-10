@@ -9,11 +9,20 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
     inputs:
-      data:
+      now_time:
+        required: true
+        type: stirng
+      c_temp:
         required: true
         type: string
-      data2:
-        required: false
+      c_hum:
+        required: true
+        type: string
+      l_temp:
+        required: true
+        type: string
+      l_hum:
+        required: true
         type: string
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
@@ -23,7 +32,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print data
-        run: echo "Data- ${{ github.event.inputs.data }}"
+        run: echo "Data- ${{ inputs.data }}"
       - name: Print data2
         run: echo "Data2- ${{ secrets.GITHUB_TOKEN }}"
         
@@ -36,7 +45,7 @@ jobs:
 
     - name: Modify .txt file
       run: |
-        echo "Appending new line to the file" >> ./content.txt
+        echo "${{github.inputs.data}}" >> ./content.txt
 
     - name: Commit changes
       run: |
