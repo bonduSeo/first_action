@@ -45,7 +45,11 @@ jobs:
 
     - name: Modify .txt file
       run: |
-        echo "${{github.event.inputs.now_time}}\n${{github.event.inputs.c_temp}}" >> ./content.txt
+        echo "${{inputs.now_time}}" >> ./content.txt
+        echo "${{inputs.c_temp}}" >> ./content.txt
+        echo "${{inputs.c_hum}}" >> ./content.txt
+        echo inputs.l_temp >> ./content.txt
+        echo inputs.l_hum >> ./content.txt
 
     - name: Commit changes
       run: |
