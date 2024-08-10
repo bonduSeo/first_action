@@ -36,7 +36,7 @@ jobs:
 
     - name: Modify .txt file
       run: |
-        echo "Appending new line to the file" >> //content.txt
+        echo "Appending new line to the file" >> ./content.txt
 
     - name: Commit changes
       run: |
