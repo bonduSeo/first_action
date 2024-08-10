@@ -7,3 +7,8 @@ Appending new line to the file
 50
 inputs.l_temp
 inputs.l_hum
+현재시간2024. 8. 8. 오전 8:56
+31.5°C
+50
+31.5°C
+50
