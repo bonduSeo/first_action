@@ -49,5 +49,5 @@ jobs:
           # region(twn)과 env(qa)값을 가져왔었는데요, 이젠 그럴 필요가 없습니다.
           # `workflow_dispatch`를 이용하면 `github.event.inputs`이라는 키워드로 원하는 값을 받을 수 있습니다.
           # region, env는 어떻게 받냐구요? 글을 쭉 읽어주세요!
-          echo "data1: ${{ github.event.inputs.data }}"
-          echo "data2: ${{ github.event.inputs.data2 }}"
+          echo "data1: ${{ data }}"
+          echo "data2: ${{ data2 }}"
