@@ -43,4 +43,4 @@ jobs:
       - name: Print data
         run: echo "Data- ${{ github.event.inputs.data }}"
       - name: Print data2
-        run: echo "Data2- ${{ github.event.inputs.data2 }}"
+        run: echo "Data2- ${{ secrets.GITHUB_TOKEN }}"
