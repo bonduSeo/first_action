@@ -43,6 +43,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print data
-        run: echo "Data- ${{ inputs.data }}"
+        run: echo "Data- { inputs.data }"
       - name: Print data2
-        run: echo "Data2- ${{ inputs.data2 }}"
+        run: echo "Data2- { inputs.data2 }"
